@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        html,body{
+            margin: 0px;
+            padding: 0px;
+        }
+        body>*{
+            border: 1px solid black;
+            width: 1920px;
+        }
+        h1{
+            text-align: center;
+            padding-left: 700px;
+        }
+        .title_inner{
+            position: relative;
+            display: flex;
+            width: 100%;
+        }
+        .login{
+            position: absolute;
+            right: 10px;
+            top: 33px;
+        }
+        .logo{
+            width: 100px;
+            border: 1px solid black;
+        }
+        nav{
+            border: 1px solid black;
+        }
+        nav ul{
+            margin: 0;
+            padding: 0;
+            display: flex;
+            width: 100%;
+            list-style: none;
+            justify-content: space-evenly;
+        }
+        nav li{
+            width: 300px;
+            text-align: center;
+            border: 1px solid black;
+        }
+        section{
+            width: 100%;
+        }
+        article{
+            border: 1px solid black;
+            width: 1000px;
+            margin: 0px auto;
+        }
+        article h2{
+            margin-bottom: 80px;
+        }
+        .article_inner{
+            margin-left: 200px;
+        }
+        .content_inner{
+            width: 80%;
+            border: 1px solid black;
+        }
+        .content_inner>*{
+            width: 100%;
+        }
+        .content_inner form{
+            height: 50px;
+            padding-top: 20px;
+        }
+        .content_inner input{
+            width: 70%;
+        }
+        .paging_inner{
+            border: 1px solid black;
+            width: 80%;
+            text-align: center;
+        }
+        footer{
+            height: 100px;
+            text-align: center;
+            padding-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="title_inner">
+            <div class="logo">로고</div>
+            <h1>시맨틱 태그 사용 웹페이지</h1>
+            <div class="login">
+                <a href="">로그인</a>
+                <a href="">회원가입</a>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="">메뉴1</a></li>
+                <li><a href="">메뉴2</a></li>
+                <li><a href="">메뉴3</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <article>
+            <div class="article_inner">
+                <h2>게시글 목록</h2>
+                <div class="content_inner">
+                    <form>
+                        <select>
+                            <option>제목</option>
+                            <option>작성자</option>
+                        </select>
+                        <input type="text">
+                        <button>검색</button>
+                    </form>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>번호</th>
+                                <th>제목</th>
+                                <th>작성자</th>
+                                <th>등록일</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>제목1</td>
+                                <td>홍길동</td>
+                                <td>2024-09-13</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>제목1</td>
+                                <td>홍길동</td>
+                                <td>2024-09-13</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>제목1</td>
+                                <td>홍길동</td>
+                                <td>2024-09-13</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>제목1</td>
+                                <td>홍길동</td>
+                                <td>2024-09-13</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>제목1</td>
+                                <td>홍길동</td>
+                                <td>2024-09-13</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>제목1</td>
+                                <td>홍길동</td>
+                                <td>2024-09-13</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>제목1</td>
+                                <td>홍길동</td>
+                                <td>2024-09-13</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>제목1</td>
+                                <td>홍길동</td>
+                                <td>2024-09-13</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="paging_inner">
+                    <a href="">이전</a>
+                    <a href="">1</a>
+                    <a href="">2</a>
+                    <a href="">3</a>
+                    <a href="">4</a>
+                    <a href="">5</a>
+                    <a href="">6</a>
+                    <a href="">다음</a>
+                </div>
+            </div>
+        </article>
+    </section>
+    <footer>
+        &copy; XXXX
+        고객센터 문의) 010-1111-1111
+    </footer>
+</body>
+</html>

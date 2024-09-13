@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.js"></script>
+    <style>
+        #inlineBox{
+            width: 200px;
+            height: 30px;
+        }
+        #blockBox li{
+            display: inline-block;
+        }
+        #blockBox ul{
+            display: flex;
+            justify-content: space-between;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        #blockBox{
+            margin: auto;
+            border: 1px solid black;
+            width: 500px;
+        }
+        .relative{
+            /* 상대적배치 원래 자신의 위치 영역을 유지 */
+            position: relative; 
+            left: 50px;
+            top: 50px;
+        }
+        #absolute #box1{
+            /* 부모에게 position이 선언된 경우 
+            부모를 기준으로 사면에 대하여 이동하는 배치속성
+            부모에겐 주로 relative 속성 선언하여 사용함
+            */
+            position: absolute;
+            right: 100px;
+            bottom: 20px;
+        }
+        #fixed #box2{
+            /* 부모에게 position이 선언된 경우 
+            부모를 기준으로 사면에 대하여 이동하는 배치속성
+            부모에겐 주로 relative 속성 선언하여 사용함
+            */
+            position: fixed;
+            right: 0px;
+            bottom: 20px;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            // alert("js");
+        });
+        $(function(){
+            $("#inlineBox button:eq(0)").click(function(){
+                // 자바스크립트로 css 속성값 부여시 카멜기법 사용
+                // jQuery에서는 css 속성값 그대로 사용
+                $("#inlineBox span").css("display","inline-block");
+            });
+        });
+        $("#relative button").click(function(){
+            let index = $(this).text();
+            console.log(index);
+            console.log($("#relative div:eq("+ index-1 +")"));
+            $("#relative div:eq("+ (index-1) +")").addClass("relative");
+        });
+    </script>
+</head>
+<body>
+    <div id="inlineBox">
+        <button>block으로 변경</button>
+        <br>
+        <span>span1</span>
+        <span>span2</span>
+        <span>span3</span>
+        <span>span4</span>
+        <span>span5</span>
+    </div><br><br>
+    <div id="blockBox">
+        <ul>
+            <li>메뉴1</li>
+            <li>메뉴2</li>
+            <li>메뉴3</li>
+            <li>메뉴4</li>
+            <li>메뉴5</li>
+        </ul>
+    </div>
+    <div id="positionBox">
+        <div id="relative">
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>4</button>
+            <button>5</button>
+            <div style="width: 50px; height: 50px; background-color: red;">1</div>
+            <div style="width: 50px; height: 50px; background-color: green;">2</div>
+            <div style="width: 50px; height: 50px; background-color: yellow;">3</div>
+            <div style="width: 50px; height: 50px; background-color: blue;">4</div>
+            <div style="width: 50px; height: 50px; background-color: violet;">5</div>
+        </div>
+    </div><br>
+    <div id="absolute">
+        <div id="box1" style="width: 50px; height: 50px; background-color: red;">1</div>
+        <div style="width: 50px; height: 50px; background-color: green;">2</div>
+        <div style="width: 50px; height: 50px; background-color: yellow;">3</div>
+    </div>
+    <div id="fixed">
+        <div id="box1" style="width: 50px; height: 50px; background-color: red;">1</div>
+        <div id="box2" style="width: 50px; height: 50px; background-color: green;">2</div>
+        <div id="box3" style="width: 50px; height: 50px; background-color: yellow;">3</div>
+    </div>
+</body>
+</html>
