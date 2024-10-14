@@ -7,6 +7,11 @@
         html,body{
             margin: 0px;
             padding: 0px;
+            background-color: #FFFBEC;
+            color: #5D4037;
+            font-weight: bold;
+            font-size: 18px;
+            height: 100%;
         }
         body>*{
             border: 1px solid black;
@@ -27,7 +32,8 @@
             top: 33px;
         }
         .logo{
-            width: 100px;
+            width: 150px;
+            height: 150px;
             border: 1px solid black;
         }
         nav{
@@ -80,120 +86,143 @@
             text-align: center;
         }
         footer{
-            height: 100px;
+            height: 50px;
             text-align: center;
-            padding-top: 50px;
+            padding-top: 30px;
+        }
+        #outDiv{
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: white;
+            width:1000px;
+            border-radius:20px;
+            margin:auto;
+        }
+        #jBtn,#lBtn,#resetBtn,#join,#sBtn,#listBtn,#wBtn,#cBtn{
+            border-radius:5px;
+            background-color:#FFA500;
+            color:white;
+            border:none;
+            font-size:18px;
+            width:120px;
+            height:40px;
+            cursor:pointer;
+        }
+        a{
+            text-decoration-line: none;
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="title_inner">
-            <div class="logo">로고</div>
-            <h1>시맨틱 태그 사용 웹페이지</h1>
-            <div class="login">
-                <a href="">로그인</a>
-                <a href="">회원가입</a>
-            </div>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="">메뉴1</a></li>
-                <li><a href="">메뉴2</a></li>
-                <li><a href="">메뉴3</a></li>
-            </ul>
-        </nav>
-    </header>
-    <section>
-        <article>
-            <div class="article_inner">
-                <h2>게시글 목록</h2>
-                <div class="content_inner">
-                    <form>
-                        <select>
-                            <option>제목</option>
-                            <option>작성자</option>
-                        </select>
-                        <input type="text">
-                        <button>검색</button>
-                    </form>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>번호</th>
-                                <th>제목</th>
-                                <th>작성자</th>
-                                <th>등록일</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>제목1</td>
-                                <td>홍길동</td>
-                                <td>2024-09-13</td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>제목1</td>
-                                <td>홍길동</td>
-                                <td>2024-09-13</td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>제목1</td>
-                                <td>홍길동</td>
-                                <td>2024-09-13</td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>제목1</td>
-                                <td>홍길동</td>
-                                <td>2024-09-13</td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>제목1</td>
-                                <td>홍길동</td>
-                                <td>2024-09-13</td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>제목1</td>
-                                <td>홍길동</td>
-                                <td>2024-09-13</td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>제목1</td>
-                                <td>홍길동</td>
-                                <td>2024-09-13</td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>제목1</td>
-                                <td>홍길동</td>
-                                <td>2024-09-13</td>
-                            </tr>
-                        </tbody>
-                    </table>
+    <div id="outDiv">
+        <header>
+            <div class="title_inner">
+                <div class="logo">
+                    <img src="logo.jpg" width="150px">
                 </div>
-                <div class="paging_inner">
-                    <a href="">이전</a>
-                    <a href="">1</a>
-                    <a href="">2</a>
-                    <a href="">3</a>
-                    <a href="">4</a>
-                    <a href="">5</a>
-                    <a href="">6</a>
-                    <a href="">다음</a>
+                <div class="login">
+                    <a href=""><button id="jBtn">로그인</button></a>
+                    <a href=""><button id="jBtn">회원가입</button></a>
                 </div>
             </div>
-        </article>
-    </section>
-    <footer>
-        &copy; XXXX
-        고객센터 문의) 010-1111-1111
-    </footer>
+            <nav>
+                <ul>
+                    <li><a href="">메뉴1</a></li>
+                    <li><a href="">메뉴2</a></li>
+                    <li><a href="">메뉴3</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section>
+            <article>
+                <div class="article_inner">
+                    <h2>게시글 목록</h2>
+                    <div class="content_inner">
+                        <form>
+                            <select>
+                                <option>제목</option>
+                                <option>작성자</option>
+                            </select>
+                            <input type="text">
+                            <button>검색</button>
+                        </form>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>번호</th>
+                                    <th>제목</th>
+                                    <th>작성자</th>
+                                    <th>등록일</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>제목1</td>
+                                    <td>홍길동</td>
+                                    <td>2024-09-13</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>제목1</td>
+                                    <td>홍길동</td>
+                                    <td>2024-09-13</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>제목1</td>
+                                    <td>홍길동</td>
+                                    <td>2024-09-13</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>제목1</td>
+                                    <td>홍길동</td>
+                                    <td>2024-09-13</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>제목1</td>
+                                    <td>홍길동</td>
+                                    <td>2024-09-13</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>제목1</td>
+                                    <td>홍길동</td>
+                                    <td>2024-09-13</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>제목1</td>
+                                    <td>홍길동</td>
+                                    <td>2024-09-13</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>제목1</td>
+                                    <td>홍길동</td>
+                                    <td>2024-09-13</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="paging_inner">
+                        <a href="">이전</a>
+                        <a href="">1</a>
+                        <a href="">2</a>
+                        <a href="">3</a>
+                        <a href="">4</a>
+                        <a href="">5</a>
+                        <a href="">6</a>
+                        <a href="">다음</a>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <footer>
+            &copy; XXXX
+            고객센터 문의) 010-1111-1111
+        </footer>
+    </div>
 </body>
 </html>
